@@ -1,0 +1,32 @@
+{
+  "type": "DirectionalValve",
+  "family": "4/2",
+  "name": "Válvula direccional 4/2 solenoide simple",
+  "symbol": "iso1219_valve_4_2_solenoid",
+  "description": "Válvula 4/2 con un solenoide, posición reposo P→B, A→T (o configurable)",
+  "ports": [
+    {"name": "P", "type": "fluid", "direction": "in", "rel_pos": [0.0, 0.5]},
+    {"name": "T", "type": "fluid", "direction": "out", "rel_pos": [1.0, 0.5]},
+    {"name": "A", "type": "fluid", "direction": "bidir", "rel_pos": [0.3, 0.2]},
+    {"name": "B", "type": "fluid", "direction": "bidir", "rel_pos": [0.7, 0.2]},
+    {"name": "sol1", "type": "electric", "direction": "in", "rel_pos": [0.5, 0.9]}
+  ],
+  "default_parameters": {
+    "initial_position": "neutral",
+    "flow_coefficient": 0.95,
+    "pressure_drop": 0.05
+  },
+  "logic_class": "DirectionalValve_4_2",          
+  "graphic_class": "GraphicsValve",               
+  "variants": [
+    {
+      "name": "Centro cerrado",
+      "initial_position": "closed_center"
+    },
+    {
+      "name": "Centro abierto",
+      "initial_position": "open_center"
+    }
+  ],
+  "icon": "valve_4_2.png"                      
+}
